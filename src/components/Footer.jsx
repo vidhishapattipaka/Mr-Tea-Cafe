@@ -3,7 +3,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-content">
         <div>
-          <h3>Mr. Tea Cafe</h3>
+          <h3>Mr. Tea Cafe ☕</h3>
           <p>Freshly brewed happiness in every cup.</p>
         </div>
         <div>
