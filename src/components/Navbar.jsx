@@ -10,7 +10,7 @@ function Navbar() {
     <header className="navbar">
       <div className="container navbar-container">
         <NavLink to="/" className="logo" onClick={closeMenu}>
-          Mr. Tea Cafe
+          Mr. Tea Cafe ☕
         </NavLink>
 
         <button
