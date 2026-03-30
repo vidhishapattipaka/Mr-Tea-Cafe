@@ -18,22 +18,46 @@ function Contact() {
     alert('Message sent successfully!')
     setFormData({ name: '', email: '', message: '' })
   }
-   return (
+
+  return (
     <div className="page-wrapper">
       <section className="page-banner">
         <div className="container">
-          <h1>Contact Us</h1>
-          <p>We would love to hear from you. Visit, call, or message us anytime.</p>
+          <h1>Contact Mr. Tea Cafe</h1>
+          <p>
+            We would love to hear from you. Visit us, call us, or send us a message anytime.
+          </p>
         </div>
       </section>
 
       <section className="section">
         <div className="container contact-grid">
           <div className="contact-info">
-            <SectionTitle title="Get in Touch" />
-            <p><strong>Phone:</strong> +91 98765 43210</p>
-            <p><strong>Email:</strong> hello@mrteacafe.com</p>
-            <p><strong>Address:</strong> 12 Tea Street, Bandra West, Mumbai, India</p>
+            <SectionTitle
+              title="Get in Touch"
+              subtitle="Reach out for inquiries, orders, or a relaxing tea-time visit."
+            />
+
+            <div className="contact-detail-list">
+              <div className="contact-detail-card">
+                <h3>Phone</h3>
+                <p>+91 98765 43210</p>
+              </div>
+
+              <div className="contact-detail-card">
+                <h3>Email</h3>
+                <p>hello@mrteacafe.com</p>
+              </div>
+
+              <div className="contact-detail-card">
+                <h3>Address</h3>
+                <p>12 Tea Street, Bandra West, Mumbai, India</p>
+              </div>
+            </div>
+
+            <p className="contact-note">
+              We usually respond quickly and would be happy to help you with your questions.
+            </p>
 
             <div className="map-wrapper">
               <iframe
@@ -44,8 +68,13 @@ function Contact() {
               ></iframe>
             </div>
           </div>
-           <div className="contact-form-box">
-            <SectionTitle title="Send a Message" />
+
+          <div className="contact-form-box">
+            <SectionTitle
+              title="Send a Message"
+              subtitle="Fill out the form below and we will get back to you soon."
+            />
+
             <form className="contact-form" onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -55,6 +84,7 @@ function Contact() {
                 onChange={handleChange}
                 required
               />
+
               <input
                 type="email"
                 name="email"
@@ -63,6 +93,7 @@ function Contact() {
                 onChange={handleChange}
                 required
               />
+
               <textarea
                 name="message"
                 rows="6"
@@ -71,6 +102,7 @@ function Contact() {
                 onChange={handleChange}
                 required
               ></textarea>
+
               <button type="submit" className="btn btn-primary full-width">
                 Send Message
               </button>

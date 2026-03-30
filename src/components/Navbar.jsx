@@ -10,7 +10,7 @@ function Navbar() {
     <header className="navbar">
       <div className="container navbar-container">
         <NavLink to="/" className="logo" onClick={closeMenu}>
-          Mr. Tea Cafe
+          <span className="logo-highlight">Mr.</span> Tea Cafe
         </NavLink>
 
         <button
@@ -20,12 +20,17 @@ function Navbar() {
         >
           ☰
         </button>
+
         <nav className={`nav-links ${menuOpen ? 'active' : ''}`}>
           <NavLink to="/" onClick={closeMenu}>Home</NavLink>
           <NavLink to="/about" onClick={closeMenu}>About</NavLink>
           <NavLink to="/menu" onClick={closeMenu}>Menu</NavLink>
           <NavLink to="/gallery" onClick={closeMenu}>Gallery</NavLink>
           <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
+
+          <NavLink to="/contact" className="nav-cta" onClick={closeMenu}>
+            Order Now
+          </NavLink>
         </nav>
       </div>
     </header>
