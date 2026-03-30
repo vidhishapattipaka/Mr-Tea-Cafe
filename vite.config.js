@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: process.env.NODE_ENV === 'production'
-    ? '/Mr-Tea-Cafe/'
-    : '/',
+  base: process.env.VERCEL
+    ? '/'                  // Vercel ke liye
+    : '/Mr-Tea-Cafe/',    // GitHub Pages ke liye
 })
